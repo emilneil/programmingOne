@@ -32,7 +32,7 @@ public class InputOutputFixed {
         FileReader fileRead = new FileReader("src/resources/info.txt");
         Scanner fileScan = new Scanner(fileRead);
         String answer = fileScan.nextLine();
-        String[] sections= answer.split(":",3);
+        String[] sections= answer.split(":",4);
         System.out.println("Name: " + sections[0]);
         System.out.println("Age: " + sections[1]);
         System.out.println("Height: " + sections[2]);
