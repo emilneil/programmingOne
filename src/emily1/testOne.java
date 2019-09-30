@@ -1,4 +1,6 @@
 package emily1;
+import java.util.Scanner;
+import java.io.*;
 
 public class testOne {
 
