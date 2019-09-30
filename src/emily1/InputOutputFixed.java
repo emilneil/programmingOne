@@ -16,13 +16,11 @@ public class InputOutputFixed {
         infoName.add("Name");
         infoName.add("Age");
         infoName.add("height");
-
         //opening text file
-
         FileWriter file = new FileWriter("src/resources/info.txt");
         BufferedWriter buff = new BufferedWriter(file);
-
         int arrayNum = 0;
+        //starting loop of info inputs
         while (arrayNum < 3) {
             //y is the number of items in the array
             System.out.println("input your " + infoName.get(arrayNum));
@@ -31,13 +29,16 @@ public class InputOutputFixed {
             ++arrayNum;
         }
         buff.close();
-        FileReader fileread = new FileReader("src/resources/info.txt");
-        Scanner fileScan = new Scanner(fileread);
+        FileReader fileRead = new FileReader("src/resources/info.txt");
+        Scanner fileScan = new Scanner(fileRead);
+        String answer = fileScan.nextLine();
+        String[] sections= answer.split(":",3);
+        System.out.println("Name: " + sections[0]);
+        System.out.println("Age: " + sections[1]);
+        System.out.println("Height: " + sections[2]);
 
-        while (fileScan.hasNextLine()) {
-            System.out.println(fileScan.nextLine());
         }
     }
-}
+
 
 
