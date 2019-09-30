@@ -6,10 +6,11 @@ import java.io.IOException;
 public class writeFile {
 
     public static void main(String[] args) {
+        String check = ("im tired");
         try {
             FileWriter file = new FileWriter("src/resources/writing.txt");
             BufferedWriter buff = new BufferedWriter(file);
-            buff.write("i am tired");
+            buff.write(check);
             buff.newLine();
             buff.write("hello whats up");
             buff.close();

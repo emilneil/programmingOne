@@ -24,28 +24,25 @@ public class inputOutputTest {
                 System.out.println("input your " + infoName.get(arrayNum));
 
                 String name = scan.nextLine();
-
                 System.out.println("Is " + name + " correct? (true or false)");
 
                 Boolean nameInfo = scan.nextBoolean();
-                if (nameInfo = true) {
-                    truthCheck = truthCheck + 1;
-                    arrayNum = arrayNum + 1;
+                if (nameInfo != true) {
+                    System.out.println("uh oh");
                 } else {
-                    System.out.println("perfect");
+                    try {
+                        FileWriter file = new FileWriter("src/resources/info.txt");
+                        BufferedWriter buff = new BufferedWriter(file);
+                        buff.write(name);
+                        buff.write(":");
+                        buff.close();
+                    } catch (IOException var3) {
+                        System.out.println("ERROR");
+                    }
+                    truthCheck++;
                 }
             }
-            try{
-                FileWriter file = new FileWriter("src/resources/info.txt");
-                BufferedWriter buff = new BufferedWriter(file);
-                buff.write(name);
-                buff.write(":");
-                buff.close();
-            }
-            catch(IOException var3){
-                System.out.println("ERROR");
-
-            }
+            ++arrayNum;
         }
 
         }
