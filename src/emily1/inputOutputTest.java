@@ -11,37 +11,43 @@ public class inputOutputTest {
         //sets up a scanner
         Scanner scan = new Scanner(System.in);
         //adds a list
-        list infoName = new ArrayList;
+        ArrayList infoName = new ArrayList();
         infoName.add("Name");
         infoName.add("Age");
         infoName.add("height");
-        y = 0;
-        while(y<3){
+        int arrayNum = 0;
+        int truthCheck = 0;
+        while(arrayNum <3) {
             //y is the number of items in the array
-            while(x=0) {
+            while (truthCheck == 0) {
                 //x is whether the name is correct or not
-                System.out.println("input your " + infoName(y));
-                String name = scan.nextline();
+                System.out.println("input your " + infoName.get(arrayNum));
+
+                String name = scan.nextLine();
+
                 System.out.println("Is " + name + " correct? (true or false)");
+
                 Boolean nameInfo = scan.nextBoolean();
                 if (nameInfo = true) {
-                    x = x + 1;
-                    y = y + 1;
+                    truthCheck = truthCheck + 1;
+                    arrayNum = arrayNum + 1;
                 } else {
-                    x = x;
+                    System.out.println("perfect");
                 }
             }
-            try {
-                FileWriter file = new FileWriter("src/resources/writing.txt");
+            try{
+                FileWriter file = new FileWriter("src/resources/info.txt");
                 BufferedWriter buff = new BufferedWriter(file);
                 buff.write(name);
                 buff.write(":");
                 buff.close();
-                }
-                catch (IOException var3) {
-                    System.out.println("you did a bad");
-                }
+            }
+            catch(IOException var3){
+                System.out.println("ERROR");
+
+            }
+        }
+
         }
 
     }
-}
