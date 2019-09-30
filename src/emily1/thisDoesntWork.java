@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.BufferedWriter;
 import java.util.ArrayList;
 
-public class inputOutputTest {
+public class thisDoesntWork {
     public static void main(String[] args){
         //sets up a scanner
         Scanner scan = new Scanner(System.in);
@@ -24,6 +24,7 @@ public class inputOutputTest {
                 System.out.println("input your " + infoName.get(arrayNum));
 
                 String name = scan.nextLine();
+
                 System.out.println("Is " + name + " correct? (true or false)");
 
                 Boolean nameInfo = scan.nextBoolean();
