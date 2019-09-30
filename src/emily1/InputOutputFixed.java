@@ -13,8 +13,8 @@ public class InputOutputFixed {
         Scanner scan = new Scanner(System.in);
         //adds a list
         ArrayList infoName = new ArrayList();
-        infoName.add("Name");
-        infoName.add("Age");
+        infoName.add("name");
+        infoName.add("age");
         infoName.add("height");
         //opening text file
         FileWriter file = new FileWriter("src/resources/info.txt");
