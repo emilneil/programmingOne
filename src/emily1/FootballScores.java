@@ -43,13 +43,13 @@ public class FootballScores {
                                 String gameWinner = infos[0] + " won";
                                 System.out.println(gameWinner);
                             } else if (numberOne < numberTwo) {
-                                String gameWinner = infos[1] + "won";
+                                String gameWinner = infos[1] + " won";
                                 System.out.println(gameWinner);
                             } else {
                                 String gameWinner = "it was a draw";
                                 System.out.println(gameWinner);
                             }
-                            
+
                             valid += 1;
                         } catch (NumberFormatException e) {
                             invalid += 1;
