@@ -67,8 +67,8 @@ public class FootballScores {
         catch(IOException e){
             e.printStackTrace();
         }
-        System.out.println(valid);
-        System.out.println(invalid);
+        System.out.println(valid + " valid inputs");
+        System.out.println(invalid + " invalid inputs");
         }
 
 
