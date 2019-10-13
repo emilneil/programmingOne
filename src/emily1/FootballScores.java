@@ -1,10 +1,8 @@
 package emily1;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class FootballScores {
@@ -40,7 +38,8 @@ public class FootballScores {
 
                             String game = infos[0] + " " + infos[2] + " Vs " + infos[1] + " " + infos[3];
                             System.out.println(game);
-                            if (numberOne > numberTwo) {
+
+                            /*if (numberOne > numberTwo) {
                                 String gameWinner = infos[0] + " won";
                                 System.out.println(gameWinner);
                             } else if (numberOne < numberTwo) {
@@ -50,6 +49,7 @@ public class FootballScores {
                                 String gameWinner = "it was a draw";
                                 System.out.println(gameWinner);
                             }
+                             */
                             valid += 1;
                         } catch (NumberFormatException e) {
                             invalid += 1;
