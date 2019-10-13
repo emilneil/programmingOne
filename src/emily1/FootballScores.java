@@ -67,6 +67,8 @@ public class FootballScores {
         catch(IOException e){
             System.out.println("no file");
         }
+        System.out.println(valid);
+        System.out.println(invalid);
         }
 
 
