@@ -11,7 +11,7 @@ public class FootballScores {
         int valid = 0;
         int invalid=0;
         try{
-            FileReader fileRead = new FileReader("resources/fbScores.txt");
+            FileReader fileRead = new FileReader("src/resources/fbScores.txt");
             BufferedReader buff = new BufferedReader(fileRead);
             Scanner fileScan = new Scanner(buff);
             while (fileScan.hasNextLine()){
@@ -39,7 +39,7 @@ public class FootballScores {
                             String game = infos[0] + " " + infos[2] + " Vs " + infos[1] + " " + infos[3];
                             System.out.println(game);
 
-                            /*if (numberOne > numberTwo) {
+                            if (numberOne > numberTwo) {
                                 String gameWinner = infos[0] + " won";
                                 System.out.println(gameWinner);
                             } else if (numberOne < numberTwo) {
@@ -49,7 +49,7 @@ public class FootballScores {
                                 String gameWinner = "it was a draw";
                                 System.out.println(gameWinner);
                             }
-                             */
+                            
                             valid += 1;
                         } catch (NumberFormatException e) {
                             invalid += 1;
@@ -65,7 +65,7 @@ public class FootballScores {
             }
         }
         catch(IOException e){
-            System.out.println("no file");
+            e.printStackTrace();
         }
         System.out.println(valid);
         System.out.println(invalid);
